@@ -7,8 +7,8 @@ namespace ParcialMamalon.Class
         public int AppleiD { get; set; }
         public string versionSo { get; set; }
 
-        public SmartphoneiOS(string versionSo, double currentBalance, double dataNavegation,//constructor
-        double dataRedes, int ncancion) : base(currentBalance, dataNavegation, dataRedes, ncancion)
+        public SmartphoneiOS(string versionSo, double currentBalance = 10, double dataNavegation = 1024,//constructor
+        double dataRedes = 2048, int ncancion = 1) : base(currentBalance, dataNavegation, dataRedes, ncancion)
         {
             AppleiD = Generator.AppleID();
             this.versionSo = versionSo;
@@ -31,7 +31,7 @@ namespace ParcialMamalon.Class
                         Console.Write("Ingrese el nombre de la cancion: "); 
                         string song = Console.ReadLine();
                         Console.WriteLine($"Reproduciendo la cancion {song} en iTunes");
-                        //Movements.Add(new Movement(1, $"Reproduccion  {song} en Spotify"));
+                        Movements.Add(new Movement(1, $"Reproduccion  {song} en iTunes"));
                         ncancion -= 1;
                     }
     
@@ -60,7 +60,7 @@ namespace ParcialMamalon.Class
             
             currentBalance += balanceE;
             Console.WriteLine("El saldo ha sido agreditado a su telefono");
-            //Movements.Add(new Movement(balanceE, $"Recarga de saldo"));
+            Movements.Add(new Movement(balanceE, $"Recarga de saldo"));
         }
 
         //Metodo para recargar para navegar
@@ -105,7 +105,7 @@ namespace ParcialMamalon.Class
                     {
                         Console.WriteLine("Se han agregado 200 canciones de Spotify, a disfrutar.....");
                         ncancion += 200;
-                        //Movements.Add(new Movement(3,"Agrego 200 canciones a Spotify));
+                        Movements.Add(new Movement(3,"Agrego 200 canciones a Spotify"));
                     }
                     else
                     Console.WriteLine("Su saldo es insuficiente :("); break;
@@ -134,7 +134,7 @@ namespace ParcialMamalon.Class
                     {
                         Console.WriteLine("Se han agregado 500MB para redes sociales ");
                         dataRedes += 500;
-                        //Movements.Add(new Movement(4,"Se agregaron 500MB para redes sociales));
+                        Movements.Add(new Movement(4,"Se agregaron 500MB para redes sociales"));
                     }
                     else
                     Console.WriteLine("Su saldo es insuficiente"); break;
@@ -161,7 +161,7 @@ namespace ParcialMamalon.Class
                     {
                         Console.WriteLine("Se han agregado 500MB para navegacion general ");
                         dataNavegation += 500;
-                        //Movements.Add(new Movement(5,"Se agregaron 500MB para navegacion general));
+                        Movements.Add(new Movement(5,"Se agregaron 500MB para navegacion general"));
                     }
                     else
                     Console.WriteLine("Su saldo es insuficiente"); break;

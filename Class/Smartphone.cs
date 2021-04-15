@@ -34,7 +34,7 @@ namespace ParcialMamalon.Class
                         string webPage = Console.ReadLine();
                         Console.WriteLine($"Historial---pagina web {webPage} ");
                         dataNavegation -= 4; //restando 4 MB
-                        //Movements.Add(new Movement(4, $"Navegacion en {webPage}"));
+                        Movements.Add(new Movement(4, $"Navegacion en {webPage}"));
                     }
     
                     else
@@ -67,7 +67,7 @@ namespace ParcialMamalon.Class
                        {
                         Console.WriteLine($"Ha ingreasado a la red social {social} con sus {time} minutos ");
                         dataRedes -= time * 2;
-                        //Movements.Add(new Movement(time * 2, $"Navego en la red social {social}"));
+                        Movements.Add(new Movement(time * 2, $"Navego en la red social {social}"));
                     }
     
                     else

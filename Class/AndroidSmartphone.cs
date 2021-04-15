@@ -8,8 +8,8 @@ namespace ParcialMamalon.Class
         public string model { get; set; }
         public string versionSo { get; set; }
 
-        public AndroidSmartphone(string brand, string model, string versionSo, double currentBalance , 
-        double dataNavegation, double dataRedes, int ncancion) : base(currentBalance, dataNavegation, dataRedes, ncancion)
+        public AndroidSmartphone(string brand, string model, string versionSo, double currentBalance = 10, 
+        double dataNavegation = 1024, double dataRedes = 2048, int ncancion = 1) : base(currentBalance, dataNavegation, dataRedes, ncancion)
         {
             this.brand = brand;
             this.model = model;
@@ -32,7 +32,7 @@ namespace ParcialMamalon.Class
                         Console.Write("Ingrese el nombre de la cancion: "); 
                         string song = Console.ReadLine();
                         Console.WriteLine($"Reproduciendo la cancion {song} en Spotify");
-                        //Movements.Add(new Movement(1, $"Reproduccion  {song} en Spotify"));
+                        Movements.Add(new Movement(1, $"Reproduccion  {song} en Spotify"));
                         ncancion -= 1;
                     }
     
@@ -55,7 +55,7 @@ namespace ParcialMamalon.Class
             }while(balance <=0);
             currentBalance += balance;
             Console.WriteLine($"Se ha recargado {currentBalance} a su Telefono");
-            //Movements.Add(new Movement(balance , "Recargar de saldo"));
+            Movements.Add(new Movement(balance , "Recargar de saldo"));
         }
 
         public void ReloadNavigation()
@@ -93,7 +93,7 @@ namespace ParcialMamalon.Class
                     {
                         Console.Write("Se han agregado las 200 canciones en Spotify, a disfrutar..."); 
                         ncancion += 200;
-                        //Movements.Add(new Movement(3, "Agrego 200 canciones en spotify"));
+                        Movements.Add(new Movement(3, "Agrego 200 canciones en spotify"));
                     }
     
                     else
@@ -122,7 +122,7 @@ namespace ParcialMamalon.Class
                     {
                         Console.Write("Se han agregado 500MB para redes sociales "); 
                         dataRedes += 500;
-                        //Movements.Add(new Movement(4, "Se agregaron 500MB"));
+                        Movements.Add(new Movement(4, "Se agregaron 500MB"));
                     }
     
                     else
@@ -151,7 +151,7 @@ namespace ParcialMamalon.Class
                     {
                         Console.Write("Se han agregado 500MB para navegacion web "); 
                         dataNavegation += 500;
-                        //Movements.Add(new Movement(5, "Se agregaron 500MB navegacion para web"));
+                        Movements.Add(new Movement(5, "Se agregaron 500MB navegacion para web"));
                     }
     
                     else

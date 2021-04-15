@@ -7,12 +7,12 @@ namespace ParcialMamalon.Class
     {
         public double currentBalance { get; set; }
 
-        //public List <Movement> Movements { get; set; }
+        public List <Movement> Movements { get; set; }
 
         public Phone(double currentBalance)//Constructor
         {
             this.currentBalance = currentBalance;
-            //Movements = new List<Movement>();
+            Movements = new List<Movement>();
         }
 
         public void MakeCall()
@@ -29,11 +29,8 @@ namespace ParcialMamalon.Class
                 switch(option)
                 {
                     case 1: 
-                    do
-                    {
                         Console.Write("Ingrese el tiempo que durara su llamada en minutos: "); 
-                        duration = Int32.Parse(Console.ReadLine());
-                    }while(duration >0);
+                        duration = Int32.Parse(Console.ReadLine());;
 
                     if(duration > 240)
                         Console.WriteLine(" Llamadas que sobrepasan los 240 minutos no estan permitidas");
@@ -44,7 +41,7 @@ namespace ParcialMamalon.Class
                         int number = Int32.Parse(Console.ReadLine());
                         Generator.CheckNumber(number);//verificando si tiene 8 digitos
                         Console.WriteLine("llamando...");
-                        //Movements.Add(new Movement(duration * 0.15 , $"Llamada realizada a {number}"));
+                        Movements.Add(new Movement(duration * 0.15 , $"Llamada realizada a {number}"));
                         currentBalance -= duration *0.15;
                     }
                     else
