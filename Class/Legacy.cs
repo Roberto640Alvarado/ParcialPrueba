@@ -10,8 +10,11 @@ namespace ParcialMamalon.Class
 
         public void RechargeBalance()
         {
-            Console.Write("Introduzca el saldo a recargar:");
-            double balance = Double.Parse(Console.ReadLine());
+            double balance;
+            do{
+                Console.Write("Introduzca el saldo a recargar:");
+                balance = Double.Parse(Console.ReadLine());
+            }while(balance <=0);
             currentBalance += balance;
             Console.WriteLine($"Se ha recargado {currentBalance} a su Telefono");
             //Movements.Add(new Movement(balance , "Recargar de saldo"));

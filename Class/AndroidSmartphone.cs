@@ -48,17 +48,121 @@ namespace ParcialMamalon.Class
 
         public void RechargeBalances()
         {
-            throw new NotImplementedException();
+            double balance;
+            do{
+                Console.Write("Introduzca el saldo a recargar:");
+                balance = Double.Parse(Console.ReadLine());
+            }while(balance <=0);
+            currentBalance += balance;
+            Console.WriteLine($"Se ha recargado {currentBalance} a su Telefono");
+            //Movements.Add(new Movement(balance , "Recargar de saldo"));
         }
 
         public void ReloadNavigation()
         {
-            throw new NotImplementedException();
+            bool status = true;
+            while(status)
+            {
+                Console.WriteLine("<<<<<<<<<<<RECARGAR PARA NAVEGACION GENERAL>>>>>>>>");
+                Console.WriteLine("1) Recargar Redes Sociales " + "\n2) Recargar Navegacion Web" + "\n3) Regresar" + "\n Opcion: ");
+                int option = Int32.Parse(Console.ReadLine());
+
+                switch(option)
+                {
+                    case 1:MenuRed();break;
+                    case 2:MenuNavigation(); break;
+                    case 3: break;
+                    default: Console.WriteLine("Opcion No valida"); break;
+                }
+
+            }
         }
 
         public void ReloadSongs()
         {
-            throw new NotImplementedException();
+            bool status = true;
+            while(status)
+            {
+                Console.WriteLine("<<<<<<<<<<<RECARGA DE CANCIONES>>>>>>>>");
+                Console.WriteLine("1) 200 canciones Spotify ---- $3.00 " + "\n2) Regresar" + "\n Opcion: ");
+                int option = Int32.Parse(Console.ReadLine());
+
+                switch(option)
+                {
+                    case 1: 
+                    if(currentBalance >=3)
+                    {
+                        Console.Write("Se han agregado las 200 canciones en Spotify, a disfrutar..."); 
+                        ncancion += 200;
+                        //Movements.Add(new Movement(3, "Agrego 200 canciones en spotify"));
+                    }
+    
+                    else
+                       Console.WriteLine("Insuficiente saldo");
+                    break;
+                    case 2: break;
+                    default: Console.WriteLine("Opcion No valida"); break;
+                }
+
+            }
+        }
+
+        public void MenuRed()//Metodo para la navegacion en al redes sociales
+        {
+            bool status = true;
+            while(status)
+            {
+                Console.WriteLine("<<<<<<<<<<<RECARGAR PARA REDES SOCIALES>>>>>>>>");
+                Console.WriteLine("1) 500MB para solo redes sociales -------$4.00" + "\n2) Regresar" + "\n Opcion: ");
+                int option = Int32.Parse(Console.ReadLine());
+
+                switch(option)
+                {
+                    case 1: 
+                    if(currentBalance >= 4)
+                    {
+                        Console.Write("Se han agregado 500MB para redes sociales "); 
+                        dataRedes += 500;
+                        //Movements.Add(new Movement(4, "Se agregaron 500MB"));
+                    }
+    
+                    else
+                       Console.WriteLine("Saldo Insuficiente");
+                    break;
+                    case 2: break;
+                    default: Console.WriteLine("Opcion No valida"); break;
+                }
+
+            }
+        }
+
+        public void MenuNavigation()//Metodo en la navegacion de web
+        {
+            bool status = true;
+            while(status)
+            {
+                Console.WriteLine("<<<<<<<<<<<RECARGAR PARA NAVEGACION EN LA WEB>>>>>>>>");
+                Console.WriteLine("1) 500MB para navegacion -------$5.00" + "\n2) Regresar" + "\n Opcion: ");
+                int option = Int32.Parse(Console.ReadLine());
+
+                switch(option)
+                {
+                    case 1: 
+                    if(currentBalance >= 4)
+                    {
+                        Console.Write("Se han agregado 500MB para navegacion web "); 
+                        dataNavegation += 500;
+                        //Movements.Add(new Movement(5, "Se agregaron 500MB navegacion para web"));
+                    }
+    
+                    else
+                       Console.WriteLine("Saldo Insuficiente");
+                    break;
+                    case 2: break;
+                    default: Console.WriteLine("Opcion No valida"); break;
+                }
+
+            }
         }
     }
 }
