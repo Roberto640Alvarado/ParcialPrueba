@@ -1,0 +1,16 @@
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\bin\Debug\net5.0\ParcialMamalon.exe
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\bin\Debug\net5.0\ParcialMamalon.deps.json
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\bin\Debug\net5.0\ParcialMamalon.runtimeconfig.json
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\bin\Debug\net5.0\ParcialMamalon.runtimeconfig.dev.json
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\bin\Debug\net5.0\ParcialMamalon.dll
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\bin\Debug\net5.0\ref\ParcialMamalon.dll
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\bin\Debug\net5.0\ParcialMamalon.pdb
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ParcialMamalon.csprojAssemblyReference.cache
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ParcialMamalon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ParcialMamalon.AssemblyInfoInputs.cache
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ParcialMamalon.AssemblyInfo.cs
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ParcialMamalon.csproj.CoreCompileInputs.cache
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ParcialMamalon.dll
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ref\ParcialMamalon.dll
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ParcialMamalon.pdb
+C:\Users\rober\Desktop\Parcial\ParcialMamalon\obj\Debug\net5.0\ParcialMamalon.genruntimeconfig.cache
