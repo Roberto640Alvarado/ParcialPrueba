@@ -33,7 +33,7 @@ namespace ParcialMamalon.Class
         {
             Random numberPhone = new Random(); 
             int number = numberPhone.Next(100000, 900000);
-            Console.Write($"AppleID: {number} ");
+            Console.Write($"AppleID: {number}@icloud.com");
 
             return number;
         }

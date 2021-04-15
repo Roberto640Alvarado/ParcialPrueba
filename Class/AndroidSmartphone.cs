@@ -74,7 +74,6 @@ namespace ParcialMamalon.Class
                     case 3: break;
                     default: Console.WriteLine("Opcion No valida"); break;
                 }
-
             }
         }
 
